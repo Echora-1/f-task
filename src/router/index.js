@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { loadLayoutMiddleware } from '@/router/middleware/loadLayout.middleware'
+import HomeView from '@/views/HomeView.vue'
+import ImageDetailsView from '@/views/ImageDetailsView.vue'
+import FavoritesView from '@/views/FavoritesView.vue'
 import { RouteEnum } from './routerConfig'
 
 const router = createRouter({
@@ -8,18 +11,18 @@ const router = createRouter({
     {
       path: RouteEnum.home.path,
       name: RouteEnum.home.name,
-      component: () => import(RouteEnum.home.component),
+      component: HomeView,
       meta: RouteEnum.home.meta
     },
     {
       path: RouteEnum.favorites.path,
       name: RouteEnum.favorites.name,
-      component: () => import(RouteEnum.favorites.component)
+      component: FavoritesView
     },
     {
       path: RouteEnum.imageDetails.path + ':id',
       name: RouteEnum.imageDetails.name,
-      component: () => import(RouteEnum.imageDetails.component)
+      component: ImageDetailsView
     }
   ]
 })
