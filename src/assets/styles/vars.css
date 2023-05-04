@@ -1,0 +1,8 @@
+:root {
+    --text-color: #000000;
+    --inverted-text-color: #FFFFFF;
+    --background-color: #FFFFFF;
+    ---inverted-background-color: #000000;
+    --primary-color: #FFF200;
+    --error-color: #ec4d4d;
+}
