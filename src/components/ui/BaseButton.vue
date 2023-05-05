@@ -32,6 +32,7 @@ defineProps({
   line-height: 23px;
   cursor: pointer;
   min-height: 49px;
+  color: inherit;
 
   @media (max-width: 767px) {
     min-height: 41px;
